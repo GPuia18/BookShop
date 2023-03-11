@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    min-height: 100px;
+    margin-bottom: 50px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.links a{
+    color: black;
+    text-decoration: none;
+}
+
+.link{
+    padding: 1em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo img{
+    height: 80px;
+}
+
+.pic{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+#login{
+    display: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.login a{
+    color: black;
+    text-decoration: none;
+}
+
+.login_info{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.order{
+    position: relative;
+}
+
+.order img{
+    height: 25px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.order::after{
+    content: " ";
+    font-size: 15px;
+    color: white;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    background-color: green;
+}
+
+#books div form .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-decoration: none;
+    height: 450px;
+    width: 300px;
+    margin: 20px;
+    border: 2px solid rgb(235, 237, 100);
+    background-color: rgb(240,240,240);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.types{
+    position: absolute;
+    width: 35px;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.types_info, .publisher_info, .sales_info, .character_info{
+    height: 50px;
+    display: flex;
+    justify-self: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.type{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
+.type_info{
+    margin-left: 5px;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
+.types_filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.types_filter span{
+    margin: 0px 2.5px;
+}
+
+.card_pic{
+    height: 280px;
+    width: 192px;
+    background-size: cover;
+    border: 15px solid rgb(235, 237, 100);
+}
+
+.card_title{
+    font-size: 23px;
+    text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_author{
+    font-size: 17px;
+}
+
+.card_price{
+    font-size: 15px;
+    width: 192px;
+    height: 32px;
+    background-color: rgb(235, 237, 100);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    border: 0px;
+    transition: .3s ease-in-out;
+}
+
+.card_price::after{
+    padding: 16px 16px;
+    content: " ";
+    position: absolute;
+    right: 0px;
+    background-color: rgb(239, 159, 84);
+    background-image: url("/images/add_to_cart.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card_price:hover{
+    background-color: rgb(239, 159, 84);
+    transform: scale(102.5%);
+}
+
+#books, #contact, #account{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#books{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin-bottom: 50px;
+}
+
+.cards, .filters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#my_account, #order_tab, #contact, #signup{
+    display: none;
+}
+
+.filters{
+    width: 90vw;
+}
+
+.slider{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.filters form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.filters form *{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.filters form div p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.filters form button{
+    background-color: transparent;
+    border: 2px solid rgb(239, 159, 84);
+    font-size: medium;
+    cursor: pointer;
+}
+
+.filter_button{
+    transition: 0.3s ease-in-out;
+}
+
+.filter_button:hover{
+    background-color: rgb(239, 159, 84);
+    color: white;
+}
+
+.book_info{
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.book_info2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid rgb(239, 159, 84);
+}
+
+.book_pic{
+    height: 300px;
+    width: 210px;
+    background-size: cover;
+    border: 15px solid rgb(235, 237, 100);
+}
+
+.book_description{
+    font-size: large;
+    color: black;
+    width: 40%;
+    margin-left: 50px;
+    text-align: justify;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.book_description form{
+    display: flex;
+    justify-content: center;
+}
+
+#order_tab{
+    display: none;
+    flex-direction: column;
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.order_product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    width: 90vw;
+}
+
+.order_pic{
+    height: 120px;
+    width: 78px;
+    background-size: cover;
+}
+
+.order_details{
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.order_pic_details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.order_amount{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.order_amount form{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.order_total{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.button_empty{
+    width: 200px;
+    font-size: medium;
+    height: 50px;
+    background-color: rgb(235, 237, 100);
+    border: 0;
+    cursor: pointer;
+    margin: 10px 0px
+}
+
+.login_form{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login_form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.submit_button_login{
+    border: 0px;
+    cursor: pointer;
+    height: 50px;
+    background-color: rgb(235, 237, 100);
+    font-size: medium;
+    transition: 0.3s ease-in-out;
+}
+
+.submit_button_login:hover{
+    background-color: rgb(239, 159, 84);
+}
+
+.login_form form input{
+    border: 2px solid rgb(239, 159, 84);
+}
+
+#my_account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#my_account form{
+    display: flex;
+    flex-direction: column;
+}
+
+#my_account form div{
+    padding: 10px;
+}
+
+.admin_buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin_buttons a{
+    padding-top: 10px;
+}
+
+.admin_buttons a:last-child{
+    padding-bottom: 10px;
+}
+
+.button_login{
+    padding: 10px 20px;
+    border: 2px solid rgb(239, 159, 84);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+#finalize_order{
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#finalize_order form{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#finalize_order form div{
+    padding-bottom: 20px;
+}
+
+#confirm_order{
+    font-size: medium;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image_input{
+    width: 200px;
+}
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+#contact div{
+    padding: 20px 0px;
+    width: 300px;
+    text-align: center;
+    border-bottom: 2px solid rgb(239, 159, 84);
+}
+
+.link:hover{
+    color: rgb(100,100,100);
+}
+
+.button_login:hover{
+    background-color: rgb(239, 159, 84);
+    color: white;
+}
+
+#my_orders, #change, #addbook, #products, #addauthor, #addpublisher, #addtype{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.one_order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
+    flex-wrap: wrap;
+}
+
+.one_order div{
+    margin: 0px 5px;
+}
+
+.order_id{
+    width: 30px;
+    text-align: center;
+    font-size: medium;
+}
+
+.order_date{
+    width: 100px;
+    text-align: center;
+    font-size: medium;
+}
+
+.order_address{
+    width: 180px;
+    text-align: center;
+    font-size: medium;
+}
+
+.order_username{
+    width: 120px;
+    text-align: center;
+    font-size: medium;
+}
+
+.order_email{
+    width: 200px;
+    text-align: center;
+    font-size: medium;
+}
+
+.order_info{
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_delete{
+    width: 100px;
+    height: 50px;
+    border: 2px solid rgb(239, 159, 84);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.form_change{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.form_addbook{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+}
+
+.form_addbook_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 5px 0px;
+}
+
+#products a{
+    padding-top: 10px;
+}
+
+.button_add{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgb(239, 159, 84);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: .25s ease-in-out;
+}
+
+.button_add:hover {
+    background-color: rgb(239, 159, 84);
+    color: white;
+}
+
+@media only screen and (max-width: 750px)  {
+    .book_description{
+        margin-left: 0px;
+        margin-top: 50px;
+        width: 75%;
+    }
+    .order_total{
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .one_order div{
+        margin: 5px 10px;
+    }
+    .order_address{
+        width: 200px;
+    }
+    .order_date{
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .card{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .book_info{
+        padding: 20px 0px;
+        margin-bottom: 20px;
+    }
+    .book_description{
+        font-size: medium;
+    }
+    .order_details{
+        width: 150px;
+    }
+    .book_info2{
+        padding: 20px 0px;
+    }
+    #books div form .card{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
